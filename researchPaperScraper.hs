@@ -52,7 +52,7 @@ signin :: IO ()
 
   requ <- parseRequest "https://login.proxy1.lib.uwo.ca/login"
   let request = requ { method = "POST"
-                     , requestBody = RequestBodyLBS "url=a&user=mmorin32&pass=AceRocks!123"}
+                     , requestBody = RequestBodyLBS "******************"}
 
   response <- httpLbs request mgrHttps
   let cookies = responseCookieJar response
